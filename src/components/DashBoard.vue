@@ -220,6 +220,10 @@ export default {
       { icon: "mdi-email", text: "yoganathanm11@gmail.com" },
       { icon: "mdi-phone", text: "+91 9626210602" },
       { icon: "mdi-map-marker-radius", text: "Chennai, India" },
+      {
+        icon: "mdi-linkedin",
+        text: "https://linkedin.com/in/yoganathan-m-b99480393",
+      },
     ],
   }),
 };
