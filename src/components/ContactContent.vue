@@ -75,11 +75,12 @@ export default {
   methods: {
     SendMessage(title) {
       if (title === "Email") {
-        this.url = "https://www.gmail.com";
+        this.url = "https://mail.google.com/mail/u/0/#inbox?compose=new";
       } else if (title === "Phone") {
         this.url = "https://www.whatsapp.com";
       } else if (title === "Location") {
-        this.url = "https://www.google.com/maps";
+        this.url =
+          "https://www.google.com/maps/place/Chennai,+Tamil+Nadu/@13.0474733,80.0438597,11z/data=!3m1!4b1!4m6!3m5!1s0x3a5265ea4f7d3361:0x6e61a70b6863d433!8m2!3d13.0843007!4d80.2704622!16zL20vMGM4dGs?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D";
       }
       // console.log("title name :", title);
     },
