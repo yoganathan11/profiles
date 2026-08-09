@@ -92,16 +92,17 @@
 
             <v-divider class="divider-glow mt-6 mb-6" />
 
-            <!-- <div class="d-flex flex-wrap justify-center">
-              <v-chip
-                rounded
+            <!-- ── Resume Buttons ── -->
+            <div class="resume-actions d-flex justify-center">
+              <v-btn
                 small
-                class="resume-chip pa-4"
-                href="./AboutContent.vue"
+                class="resume-btn"
+                @click="DownloadResume"
               >
-                <span class="contact-text">View My Work</span>
-              </v-chip>
-            </div> -->
+                <v-icon small left>mdi-download</v-icon>
+                Resume Download
+              </v-btn>
+            </div>
           </v-card>
         </v-col>
 
@@ -141,17 +142,18 @@
               </div>
             </div>
 
-            <!-- <div class="d-flex flex-wrap justify-center">
-              <v-chip
-                rounded
+            <!-- ── Resume Buttons ── -->
+            <div class="resume-actions d-flex justify-center">
+             
+              <v-btn
                 small
-                class="resume-chip pa-4"
-                href="../assets/Yoganathan M Resume.pdf"
-                target="_blank"
+                class="resume-btn"
+                @click="DownloadResume"
               >
-                <span class="contact-text">View My Work</span>
-              </v-chip>
-            </div> -->
+                <v-icon small left>mdi-download</v-icon>
+                Resume Download
+              </v-btn>
+            </div>
           </v-card>
         </v-col>
 
@@ -188,24 +190,21 @@
                 <span class="contact-text">{{ item.text }}</span>
               </div>
             </div>
-            <!-- <v-divider class="divider-glow mb-4" />
-            <div class="d-flex flex-wrap justify-center">
-              <v-chip rounded small class="white">
-                <span class="contact-text">Download Resume</span>
-              </v-chip>
-            </div> -->
-            <!-- <div class="d-flex flex-wrap justify-center">
-              <v-chip
-                rounded
+
+            <!-- ── Resume Buttons ── -->
+            <div class="resume-actions d-flex justify-center">
+             
+              <v-btn
                 small
-                class="resume-chip pa-4"
-                href="../assets/Yoganathan M Resume.pdf"
-                target="_blank"
+                class="resume-btn"
+                @click="DownloadResume"
               >
-                <span class="contact-text">View My Work</span>
-              </v-chip>
-            </div>  --> </v-card
-          >2
+                <v-icon small left>mdi-download</v-icon>
+               Resume Download
+              </v-btn>
+            </div>
+            </v-card
+          >
         </v-col>
       </v-row>
     </v-container>
@@ -226,6 +225,25 @@ export default {
       },
     ],
   }),
+  methods:{
+    DownloadResume(){
+      fetch('/Yoganathan resume.pdf')
+      .then((res)=>res.blob())
+      .then((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Yoganathan resume.pdf";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      })
+      .catch(() => {
+        window.open("/Yoganathan resume.pdf", "_blank");
+      });
+    }
+  }
 };
 </script>
 
@@ -358,21 +376,25 @@ export default {
   background: rgba(118, 25, 205, 0.45) !important;
   transform: translateY(-1px);
 }
-.resume-chip {
+
+/* ── Resume buttons ── */
+.resume-actions {
+  width: 100%;
+}
+
+.resume-btn {
   background: rgba(118, 25, 205, 0.25) !important;
   color: #c4b5fd !important;
   border: 1px solid rgba(118, 25, 205, 0.5) !important;
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
   transition: background 0.2s, transform 0.2s;
 }
-.resume-chip:hover {
-  background: rgba(118, 25, 205, 0.45) !important;
+
+.resume-btn:hover {
+  background: rgba(118, 25, 205, 0.5) !important;
   transform: translateY(-1px);
-}
-.resume-path {
-  color: #c4b5fd !important;
-  text-decoration: none;
 }
 </style>
