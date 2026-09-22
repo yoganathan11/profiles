@@ -227,20 +227,20 @@ export default {
   }),
   methods:{
     DownloadResume(){
-      fetch('/Yoganathan resume.pdf')
+      fetch('./Yoganathan_Dev.pdf')
       .then((res)=>res.blob())
       .then((blob) => {
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = "Yoganathan resume.pdf";
+        a.download = "Yoganathan Dev.pdf";
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
       })
       .catch(() => {
-        window.open("/Yoganathan resume.pdf", "_blank");
+        window.open("/Yoganathan Dev.pdf", "_blank");
       });
     }
   }

@@ -60,13 +60,13 @@ export default {
         title: "External Api Response Tracker",
         Technology: "Vue.js 2, Golang, Rest API’s, PostgreSQL",
         Description:
-          "Developed an API monitoring solution to track external service integrations, improving visibility into API performance, enabling faster detection of failures and delays, and reducing operational downtime through centralized logging and real-time monitoring.",
+          "Developed a Go (Golang)-based API monitoring system to track third-party API availability, success and failure rates, and response latency. Built REST API logging services in Go to capture request and response details, HTTP status codes, latency metrics, and error information in PostgreSQL. Implemented configurable retry mechanisms and structured error handling for third-party API failures to improve service reliability and stability. Developed a Vue.js 2 dashboard for real-time API health monitoring, filtering, status tracking, failure analysis, and latency trend visualization.",
       },
       {
         title: "Client Fund Tracker",
         Technology: "Vue.js 2, Golang, Rest API's, MySQL, PostgreSQL",
         Description:
-          "Developed a monitoring system to track client fund allocation and deallocation transactions through external APIs. The application improved transaction visibility, helped identify missing or failed requests, reduced manual reconciliation efforts, and ensured accurate fund tracking between internal systems and external services.",
+          "Developed Go-based backend services and APIs to monitor client fund allocation and deallocation transactions across integrated systems. Implemented real-time fund movement monitoring and validation to improve transaction accuracy, traceability, and operational visibility. Developed automated validation logic to identify fund mismatches, including cases where funds were deallocated without a corresponding allocation to the target client. Implemented automated email alerts for critical transaction mismatches, enabling faster issue identification, investigation, and manual intervention.",
       },
     ],
   }),

@@ -42,13 +42,7 @@
           <v-icon class="quote-icon mb-4" large>mdi-format-quote-open</v-icon>
 
           <p class="about-text">
-            Software Developer with hands-on experience in full-stack
-            development, specializing in Golang backend and Vue.js frontend.
-            Experienced in building and integrating RESTful APIs, working with
-            SQL databases, and developing scalable and efficient applications.
-            Passionate about writing clean code, solving problems, and
-            continuous learning. Seeking growth-oriented software development
-            opportunities.
+            Software Developer specializing in Go (Golang) backend development, RESTful APIs, PostgreSQL, MySQL, SQL optimization, and third-party API integrations. Experienced in developing and maintaining production backend services for fintech applications, with a strong focus on performance, reliability, scalability, and efficient data processing. Hands-on experience in structured error handling, retry mechanisms, API logging and monitoring, database optimization, WebSocket-based real-time data communication, and production troubleshooting. Proficient in Go, REST APIs, PostgreSQL, MySQL, Vue.js 2, Git, Docker, Kubernetes, and Linux.
           </p>
 
           <!-- Tech tags -->
@@ -67,7 +61,7 @@
 export default {
   name: "AboutMe",
   data: () => ({
-    tags: ["Golang", "Vue.js", "REST APIs", "SQL", "Full-Stack"],
+    tags: ["Golang", "Vue.js", "REST APIs", "SQL", "Full-Stack", "Docker", "Kubernetes", "WebSocket"],
   }),
 };
 </script>

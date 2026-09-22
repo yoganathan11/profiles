@@ -195,7 +195,7 @@ export default {
         title: "Backend",
         icon: "mdi-server",
         color: "#a78bfa",
-        skills: ["GoLang", "Python", "REST APIs"],
+        skills: ["GoLang", "REST APIs", "WebSocket"],
       },
       {
         title: "Database",
@@ -207,7 +207,7 @@ export default {
         title: "Tools & Platforms",
         icon: "mdi-wrench",
         color: "#a78bfa",
-        skills: ["Git & GitHub", "VS Code", "Postman"],
+        skills: ["Git & GitHub", "VS Code", "Postman", "Docker", "Kubernetes"],
       },
       {
         title: "Languages",
